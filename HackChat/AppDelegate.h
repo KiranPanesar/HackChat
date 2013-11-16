@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class SignInViewController;
+@class LandingViewController;
+@class KPHackChat;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) SignInViewController  *signInViewController;
+@property (strong, nonatomic) LandingViewController *landingViewController;
+@property (strong, nonatomic) KPHackChat *chat;
 
 @end

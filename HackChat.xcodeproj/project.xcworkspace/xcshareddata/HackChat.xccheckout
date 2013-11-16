@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D429AF1-2FF5-4DA2-87BC-773C70A5B430</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HackChat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>00280EA2-BD3E-4C84-B26B-C2C046D1866D</key>
+		<string>https://github.com/KiranPanesar/HackChat.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HackChat.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>00280EA2-BD3E-4C84-B26B-C2C046D1866D</key>
+		<string>../..</string>
+		<key>7CAE58D2-CB07-4D52-9708-6901DBEF9137</key>
+		<string>../../submodules/json-framework</string>
+		<key>8BD65794-1AAB-4604-9920-00B75B95806E</key>
+		<string>../../HackChat/KPHackChat/SocketIO/submodules/socket-rocket</string>
+		<key>900F0000-7650-4080-881B-5D7E8864D334</key>
+		<string>../../submodules/socket-rocket</string>
+		<key>A2315A1B-EC08-4A09-B629-632E0761EF32</key>
+		<string>../../HackChat/KPHackChat/SocketIO/submodules/socket-rocket/pages</string>
+		<key>C2EDF361-B7D3-4E49-943F-E44573B05045</key>
+		<string>../../HackChat/KPHackChat/SocketIO/submodules/json-framework</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KiranPanesar/HackChat.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>00280EA2-BD3E-4C84-B26B-C2C046D1866D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>00280EA2-BD3E-4C84-B26B-C2C046D1866D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HackChat</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CAE58D2-CB07-4D52-9708-6901DBEF9137</string>
+			<key>IDESourceControlWCCName</key>
+			<string>json-framework</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>900F0000-7650-4080-881B-5D7E8864D334</string>
+			<key>IDESourceControlWCCName</key>
+			<string>socket-rocket</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -13,4 +13,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "FlatUIKit.h"
+
+    #define KP_USERNAME [[NSUserDefaults standardUserDefaults] objectForKey:KP_USERNAME_KEY]
+    #define KP_USERNAME_KEY @"username"
+    #define KP_USER_LOGGED_IN_NOTIFICATION @"kp_user_logged_in"
 #endif

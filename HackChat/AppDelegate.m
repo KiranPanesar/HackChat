@@ -8,14 +8,50 @@
 
 #import "AppDelegate.h"
 
+#import "SignInViewController.h"
+#import "LandingViewController.h"
+#import "RoomsViewController.h"
+
+#import "RESideMenu.h"
+#import "KPHackChat.h"
+
+#import "SocketIO.h"
+
+@interface AppDelegate () <SocketIODelegate>
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    _signInViewController = [[SignInViewController alloc] init];
+    UINavigationController *signInNavigationController = [[UINavigationController alloc] initWithRootViewController:_signInViewController];
+    
+    _landingViewController = [[LandingViewController alloc] initWithUsername:@"k_panesar"];
+    UINavigationController *landingNavigationController = [[UINavigationController alloc] initWithRootViewController:_landingViewController];
+    
+    RoomsViewController *chatRooms = [[RoomsViewController alloc] init];
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:landingNavigationController
+                                                          menuViewController:chatRooms];
+    
+    [sideMenu setBackgroundImage:[UIImage imageWithColor:[UIColor belizeHoleColor] cornerRadius:0.0f]];
+
+    [_window setRootViewController:sideMenu];
+    [_window makeKeyAndVisible];
+    
+    [sideMenu presentViewController:signInNavigationController animated:NO completion:nil];
+    
     return YES;
 }
-							
+
+-(void)socketIODidConnect:(SocketIO *)socket {
+    NSLog(@"%@", socket);
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
