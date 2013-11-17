@@ -26,22 +26,28 @@
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // Create sign in view controller
     _signInViewController = [[SignInViewController alloc] init];
     UINavigationController *signInNavigationController = [[UINavigationController alloc] initWithRootViewController:_signInViewController];
     
+    // Create landing page (when user signs in, this shows)
     _landingViewController = [[LandingViewController alloc] init];
     UINavigationController *landingNavigationController = [[UINavigationController alloc] initWithRootViewController:_landingViewController];
     
+    // Set up vc to show all the rooms
     RoomsViewController *chatRooms = [[RoomsViewController alloc] init];
     
+    // Set up side menu controller. When the user slides from right->left, this shows the RoomsViewController
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:landingNavigationController
                                                           menuViewController:chatRooms];
     
+    // Set background image for the side menu
     [sideMenu setBackgroundImage:[UIImage imageWithColor:[UIColor belizeHoleColor] cornerRadius:0.0f]];
 
     [_window setRootViewController:sideMenu];
     [_window makeKeyAndVisible];
     
+    // Show sign in vc
     [sideMenu presentViewController:signInNavigationController animated:NO completion:nil];
     
     return YES;
