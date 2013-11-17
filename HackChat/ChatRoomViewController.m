@@ -61,15 +61,14 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
 
+// When the user joins the chat room, update view with initial message
 -(void)hackChat:(KPHackChat *)chat didJoinRoom:(NSMutableArray *)messages {
     [messagesArray addObjectsFromArray:messages];
     [messagesTableView reloadData];
 }
 
+// When a message is received, update view with new message
 -(void)hackChat:(KPHackChat *)chat didReceieveMessage:(NSMutableArray *)messages {
     [messagesArray addObjectsFromArray:messages];
     [messagesTableView reloadData];
@@ -93,12 +92,18 @@
     [messageToolbar addSubview:messagesTextField];
 }
 
+// When user hits return, send the message
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    [textField resignFirstResponder]; // Hide keyboard
+    
+    // show message in table view
     [messagesArray addObject:@{@"username": KP_USERNAME, @"message":textField.text}];
+    
+    // Send the message
     [_hackChat sendMessage:textField.text fromUsername:KP_USERNAME roomID:roomName];
     [messagesTableView reloadData];
-    [textField setText:@""];
+    [textField setText:@""]; // clear the text field.
+    
     return YES;
 }
 

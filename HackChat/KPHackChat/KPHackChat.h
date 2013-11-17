@@ -11,6 +11,8 @@
 
 @class KPHackChat;
 
+
+// Delegate methods
 @protocol KPHackChatDelegate <NSObject>
 
 @optional

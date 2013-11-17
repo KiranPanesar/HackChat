@@ -36,6 +36,7 @@
 -(id)init {
     self = [super self];
     if (self) {
+        // Listen for when the user has signed in
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(userLoggedIn)
                                                      name:KP_USER_LOGGED_IN_NOTIFICATION
@@ -45,12 +46,14 @@
     return self;
 }
 
+// When the user has signed in, load the rooms
 -(void)userLoggedIn {
     _hackChat = [[KPHackChat alloc] init];
     [_hackChat setDelegate:self];
     [_hackChat loadRoomsForUser:KP_USERNAME];
 }
 
+// When the rooms are loaded, update the view
 -(void)hackChat:(KPHackChat *)chat didLoadRooms:(NSArray *)rooms {
     hackChatRooms = rooms;
     [roomsTableView reloadData];
@@ -84,6 +87,7 @@
     return @"Pick a Room";
 }
 
+// Whent they tap on a room, join the chat room
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatRoomViewController *room = [[ChatRoomViewController alloc] initWithRoomName:[hackChatRooms objectAtIndex:indexPath.row]];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:room];

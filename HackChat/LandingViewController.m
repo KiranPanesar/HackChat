@@ -30,6 +30,7 @@
 @implementation LandingViewController
 
 
+// Set up the welcome label
 -(void)setUpNameLabel {
     usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(NAME_LABEL_X_INSET, NAME_LABEL_Y_INSET, NAME_LABEL_WIDTH, NAME_LABEL_HEIGHT)];
     [usernameLabel setFont:[UIFont boldFlatFontOfSize:20.0f]];
@@ -40,6 +41,7 @@
     [self.view addSubview:usernameLabel];
 }
 
+// Set up instructions label
 -(void)setUpInstructionLabel {
     instructionsLabel = [[UILabel alloc] initWithFrame:CGRectMake(INSTRUCTION_LABEL_X_INSET, INSTRUCTION_LABEL_Y_INSET, INSTRUCTION_LABEL_WIDTH, INSTRUCTION_LABEL_HEIGHT)];
     [instructionsLabel setFont:[UIFont flatFontOfSize:13.0f]];
@@ -50,6 +52,7 @@
     [self.view addSubview:instructionsLabel];
 }
 
+// Action for the bar button item
 -(void)showChatRooms {
     [self.sideMenuViewController presentMenuViewController];
 }
@@ -63,6 +66,7 @@
     return self;
 }
 
+// When the KP_USER_LOGGED_IN_NOTIFICATION is fired, update with username
 -(void)loggedIn {
     [usernameLabel setText:[NSString stringWithFormat:@"Welcome, %@!", KP_USERNAME]];
 }

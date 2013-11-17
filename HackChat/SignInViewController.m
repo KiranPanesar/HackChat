@@ -43,31 +43,36 @@
 
 @interface SignInViewController () <UITextFieldDelegate, KPHackChatDelegate>
 
--(void)setUpTextField;
-
 @end
 
 @implementation SignInViewController
 
+// When the user signs in, save their username and hide this vc (revealing the landing vc)
 -(void)pushSignInButton:(id)sender {
+    // Save username
     [[NSUserDefaults standardUserDefaults] setObject:usernameTextField.text forKey:KP_USERNAME_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    // Notify listeners that user has signed in
     [[NSNotificationCenter defaultCenter] postNotificationName:KP_USER_LOGGED_IN_NOTIFICATION object:nil];
     
+    // Side keyboard
     [self textFieldDidEndEditing:usernameTextField];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil]; // hide VC
 }
 
+// Set up the icon image view
 -(void)setUpIconImageView {
+    
     iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(ICON_IMAGE_VIEW_X_INSET, ICON_IMAGE_VIEW_Y_INSET, ICON_IMAGE_VIEW_WIDTH, ICON_IMAGE_VIEW_HEIGHT)];
     [[iconImageView layer] setMasksToBounds:YES];
-    [[iconImageView layer] setCornerRadius:20.0f];
-    [iconImageView setImage:[UIImage imageNamed:@"icon_medium"]];
+    [[iconImageView layer] setCornerRadius:20.0f]; // Round corners
+    [iconImageView setImage:[UIImage imageNamed:@"icon_medium"]]; // Set image
     
     [self.view addSubview:iconImageView];
 }
 
+// Set up the panning image view
 -(void)setUpImageView {
     wallImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 960.0f, self.view.frame.size.height)];
     [wallImageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -76,6 +81,7 @@
     [self.view addSubview:wallImageView];
 }
 
+// Set up central log in view
 -(void)setUpLogInBackgroundView {
     signInBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(LOG_IN_VIEW_X_INSET, LOG_IN_VIEW_Y_INSET, LOG_IN_VIEW_WIDTH, LOG_IN_VIEW_HEIGHT)];
     [signInBackgroundView setBackgroundColor:[UIColor colorWithWhite:0.0f alpha:0.8f]];
@@ -116,6 +122,7 @@
     [self.view addSubview:signInBackgroundView];
 }
 
+// Set up label at the bottom
 -(void)setUpInfoLabel {
     infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(INFO_LABEL_X_INSET, INFO_LABEL_Y_INSET, INFO_LABEL_WIDTH, INFO_LABEL_HEIGHT)];
     [infoLabel setFont:[UIFont flatFontOfSize:17.0f]];
@@ -131,6 +138,7 @@
     [self.view addSubview:infoLabel];
 }
 
+// Pan background. this is so CPU intensive...
 -(void)beginAnimatingBackground {
     [UIView animateWithDuration:45.0f delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [wallImageView setFrame:CGRectMake(-320.0f, 0.0f, 960.0f, self.view.frame.size.height)];
@@ -143,6 +151,7 @@
     }];
 }
 
+// When the user starts editing, move the log in view up and hide the keyboard
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
     [UIView animateWithDuration:.2 animations:^{
         [signInBackgroundView setFrame:CGRectMake(LOG_IN_VIEW_X_INSET, 80.0f + NAVIGATION_BAR_OFFSET, LOG_IN_VIEW_WIDTH, LOG_IN_VIEW_HEIGHT)];
@@ -150,6 +159,7 @@
     }];
 }
 
+// When they're done editing, hide keyboard, move log in view down and show icon
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     [textField resignFirstResponder];
     [UIView animateWithDuration:.2 animations:^{
@@ -158,6 +168,7 @@
     }];
 }
 
+// Hide keyboard when user hits return
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self textFieldDidEndEditing:textField];
     return YES;
@@ -178,7 +189,7 @@
 	// Do any additional setup after loading the view.
     [self setTitle:@"Sign In"];
     
-    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor midnightBlueColor]}];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor midnightBlueColor]}];
     
     [self setUpImageView];
     
