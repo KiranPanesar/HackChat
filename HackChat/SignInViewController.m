@@ -43,9 +43,7 @@
 
 @interface SignInViewController () <UITextFieldDelegate, KPHackChatDelegate>
 
--(void)setUpBackgroundImageView;
 -(void)setUpTextField;
--(void)setUpButton;
 
 @end
 
@@ -65,7 +63,7 @@
     iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(ICON_IMAGE_VIEW_X_INSET, ICON_IMAGE_VIEW_Y_INSET, ICON_IMAGE_VIEW_WIDTH, ICON_IMAGE_VIEW_HEIGHT)];
     [[iconImageView layer] setMasksToBounds:YES];
     [[iconImageView layer] setCornerRadius:20.0f];
-    [iconImageView setImage:[UIImage imageNamed:@"insta_icon_medium"]];
+    [iconImageView setImage:[UIImage imageNamed:@"icon_medium"]];
     
     [self.view addSubview:iconImageView];
 }

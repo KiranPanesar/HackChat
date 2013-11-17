@@ -29,21 +29,13 @@
 
 @implementation LandingViewController
 
--(id)initWithUsername:(NSString *)username {
-    self = [super self];
-    if (self) {
-        
-    }
-    
-    return self;
-}
 
 -(void)setUpNameLabel {
     usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(NAME_LABEL_X_INSET, NAME_LABEL_Y_INSET, NAME_LABEL_WIDTH, NAME_LABEL_HEIGHT)];
     [usernameLabel setFont:[UIFont boldFlatFontOfSize:20.0f]];
     [usernameLabel setTextAlignment:NSTextAlignmentCenter];
     [usernameLabel setTextColor:[UIColor wetAsphaltColor]];
-    [usernameLabel setText:@"Welcome, k_panesar!"];
+    [usernameLabel setText:@"Welcome!"];
     
     [self.view addSubview:usernameLabel];
 }

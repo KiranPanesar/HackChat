@@ -15,6 +15,4 @@
     UIImageView *instructionsArrow;
 }
 
--(id)initWithUsername:(NSString *)username;
-
 @end

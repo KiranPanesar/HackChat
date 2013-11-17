@@ -51,7 +51,6 @@
 		6B893D441837A51700DCF613 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B893D3A1837A51700DCF613 /* Lato-Regular.ttf */; };
 		6B893D461837A7FB00DCF613 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B893D451837A7FB00DCF613 /* Default-568h@2x.png */; };
 		6B893D4B1837AC3100DCF613 /* photo_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B893D4A1837AC3100DCF613 /* photo_wall.jpg */; };
-		6B893D4D1837AC3F00DCF613 /* insta_icon_medium@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B893D4C1837AC3F00DCF613 /* insta_icon_medium@2x.png */; };
 		6B895E4C183806810008FCF3 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E26183806810008FCF3 /* SBJsonParser.m */; };
 		6B895E4D183806810008FCF3 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E28183806810008FCF3 /* SBJsonStreamParser.m */; };
 		6B895E4E183806810008FCF3 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E2A183806810008FCF3 /* SBJsonStreamParserAccumulator.m */; };
@@ -70,6 +69,8 @@
 		6B895E5B183806810008FCF3 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E45183806810008FCF3 /* base64.c */; };
 		6B895E5C183806810008FCF3 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E48183806810008FCF3 /* NSData+SRB64Additions.m */; };
 		6B895E5D183806810008FCF3 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B895E4B183806810008FCF3 /* SRWebSocket.m */; };
+		6B9BDFEC183905860009C337 /* icon_medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9BDFEB183905860009C337 /* icon_medium.png */; };
+		6B9BDFEE183906D40009C337 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9BDFED183906D40009C337 /* icon.png */; };
 		6BFDDF261837B4CA00723DD7 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDF251837B4CA00723DD7 /* ChatRoomViewController.m */; };
 		6BFDDF291837B56400723DD7 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDF281837B56400723DD7 /* LandingViewController.m */; };
 		6BFDDF2F1837B99700723DD7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFDDF2E1837B99700723DD7 /* QuartzCore.framework */; };
@@ -165,7 +166,6 @@
 		6B893D3A1837A51700DCF613 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6B893D451837A7FB00DCF613 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6B893D4A1837AC3100DCF613 /* photo_wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo_wall.jpg; sourceTree = "<group>"; };
-		6B893D4C1837AC3F00DCF613 /* insta_icon_medium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "insta_icon_medium@2x.png"; sourceTree = "<group>"; };
 		6B895E24183806810008FCF3 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
 		6B895E25183806810008FCF3 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		6B895E26183806810008FCF3 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
@@ -205,6 +205,8 @@
 		6B895E49183806810008FCF3 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		6B895E4A183806810008FCF3 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		6B895E4B183806810008FCF3 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		6B9BDFEB183905860009C337 /* icon_medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_medium.png; sourceTree = "<group>"; };
+		6B9BDFED183906D40009C337 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		6BFDDF241837B4CA00723DD7 /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
 		6BFDDF251837B4CA00723DD7 /* ChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomViewController.m; sourceTree = "<group>"; };
 		6BFDDF271837B56400723DD7 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
@@ -415,7 +417,8 @@
 		6B893D491837AC2B00DCF613 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6B893D4C1837AC3F00DCF613 /* insta_icon_medium@2x.png */,
+				6B9BDFED183906D40009C337 /* icon.png */,
+				6B9BDFEB183905860009C337 /* icon_medium.png */,
 				6B893D4A1837AC3100DCF613 /* photo_wall.jpg */,
 			);
 			path = UI;
@@ -592,9 +595,10 @@
 				6B893D3E1837A51700DCF613 /* Lato-BoldItalic.ttf in Resources */,
 				6B893D461837A7FB00DCF613 /* Default-568h@2x.png in Resources */,
 				6B893D3B1837A51700DCF613 /* Lato-Black.ttf in Resources */,
+				6B9BDFEC183905860009C337 /* icon_medium.png in Resources */,
+				6B9BDFEE183906D40009C337 /* icon.png in Resources */,
 				6B893D411837A51700DCF613 /* Lato-Italic.ttf in Resources */,
 				6B893D4B1837AC3100DCF613 /* photo_wall.jpg in Resources */,
-				6B893D4D1837AC3F00DCF613 /* insta_icon_medium@2x.png in Resources */,
 				6B893CC518379CF700DCF613 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,6 +781,7 @@
 		6B893CEA18379CF700DCF613 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackChat/HackChat-Prefix.pch";
 				INFOPLIST_FILE = "HackChat/HackChat-Info.plist";
@@ -791,6 +796,7 @@
 		6B893CEB18379CF700DCF613 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackChat/HackChat-Prefix.pch";
 				INFOPLIST_FILE = "HackChat/HackChat-Info.plist";

@@ -15,9 +15,7 @@
 #import "RESideMenu.h"
 #import "KPHackChat.h"
 
-#import "SocketIO.h"
-
-@interface AppDelegate () <SocketIODelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -31,10 +29,11 @@
     _signInViewController = [[SignInViewController alloc] init];
     UINavigationController *signInNavigationController = [[UINavigationController alloc] initWithRootViewController:_signInViewController];
     
-    _landingViewController = [[LandingViewController alloc] initWithUsername:@"k_panesar"];
+    _landingViewController = [[LandingViewController alloc] init];
     UINavigationController *landingNavigationController = [[UINavigationController alloc] initWithRootViewController:_landingViewController];
     
     RoomsViewController *chatRooms = [[RoomsViewController alloc] init];
+    
     RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:landingNavigationController
                                                           menuViewController:chatRooms];
     
@@ -46,10 +45,6 @@
     [sideMenu presentViewController:signInNavigationController animated:NO completion:nil];
     
     return YES;
-}
-
--(void)socketIODidConnect:(SocketIO *)socket {
-    NSLog(@"%@", socket);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
